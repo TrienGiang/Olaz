@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "olaz-90e43": {
+      "hosting": {
+        "olaz-web": [
+          "olaz-90e43"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "olaz-90e43"
+  }
+}

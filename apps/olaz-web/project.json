@@ -6,7 +6,9 @@
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:browser",
-      "outputs": ["{options.outputPath}"],
+      "outputs": [
+        "{options.outputPath}"
+      ],
       "options": {
         "outputPath": "dist/apps/olaz-web",
         "index": "apps/olaz-web/src/index.html",
@@ -14,8 +16,13 @@
         "polyfills": "apps/olaz-web/src/polyfills.ts",
         "tsConfig": "apps/olaz-web/tsconfig.app.json",
         "inlineStyleLanguage": "scss",
-        "assets": ["apps/olaz-web/src/favicon.ico", "apps/olaz-web/src/assets"],
-        "styles": ["apps/olaz-web/src/styles.scss"],
+        "assets": [
+          "apps/olaz-web/src/favicon.ico",
+          "apps/olaz-web/src/assets"
+        ],
+        "styles": [
+          "apps/olaz-web/src/styles.scss"
+        ],
         "scripts": []
       },
       "configurations": {
@@ -80,10 +87,22 @@
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/apps/olaz-web"],
+      "outputs": [
+        "coverage/apps/olaz-web"
+      ],
       "options": {
         "jestConfig": "apps/olaz-web/jest.config.js",
         "passWithNoTests": true
+      }
+    },
+    "deploy": {
+      "executor": "@angular/fire:deploy",
+      "options": {
+        "prerender": false,
+        "ssr": false,
+        "browserTarget": "olaz-web:build:production",
+        "firebaseProject": "olaz-90e43",
+        "firebaseHostingSite": "olaz-90e43"
       }
     }
   },
