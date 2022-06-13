@@ -1,7 +1,10 @@
 {
   "version": 2,
   "projects": {
+    "messenger": "apps/messenger",
     "olaz-web": "apps/olaz-web",
-    "olaz-web-e2e": "apps/olaz-web-e2e"
+    "olaz-web-e2e": "apps/olaz-web-e2e",
+    "task-management": "apps/task-management",
+    "video-call": "apps/video-call"
   }
 }
